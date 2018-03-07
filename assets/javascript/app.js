@@ -82,7 +82,6 @@ $(document).ready(function() {
     "1. Free Fallin"];
 
     var questionCounter = 0;
-    var selecterAnswer;
     var theTime;
     var correctCount = 0;
     var incorrectResponse = 0;
@@ -103,7 +102,7 @@ $(document).ready(function() {
     //generate a loss, set waiting time for next question
     function generateLoss() {
         incorrectResponse++;
-        quizHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! You need to listen to more Classic Rock! The right answer is: "+ correctResponse[questionCounter] + "</p>";
+        quizHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + counter + "</span></p>" + "<p class='text-center'>Wrong! You need to brush up on your Classic Rock knowledge! The right answer is: "+ correctResponse[questionCounter] + "</p>";
         $("#mainArea").html(quizHTML);
         setTimeout(wait, 3000); 
     }//end generate loss
